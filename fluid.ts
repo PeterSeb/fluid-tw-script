@@ -50,7 +50,7 @@ function generateClass(variant: string, prefix: keyof typeof utilityMap, start: 
 }
 
 function scanClassesFromFiles(root: string) {
-  const pattern = /(?:\b([\w-]+):)?~([a-z]+)-(\d+)\/(\d+)/g;
+  const pattern = /(?:\b([\w-]+):)?~([a-z-]+)-(\d+)\/(\d+)/g;
   const found = new Set();
 
   const files = globSync(`${root}/**/*.{astro,svg}`);
